@@ -1,0 +1,134 @@
+
+-<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Daily Activity</title>
+    <style>
+        /* Styling Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling Tabel */
+        .client-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden; /* Penting untuk border radius pada table */
+        }
+        .client-table th, .client-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .client-table th {
+            background-color: #e9ecef;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+        .client-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Styling Status Client */
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .status-fail {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Manajeme Client</h1>
+        <p>Ringkasan Agenda, Hasil, dan Status Klien</p>
+    </header>
+
+    <div class="container">
+        <h2>Daftar Klien Aktif</h2>
+
+        <table class="client-table">
+            <thead>
+                <tr>
+                    <th>Client Name</th>
+                    <th>Location</th>
+                    <th>Agenda</th>
+                    <th>Result</th>
+                    <th>Status Client</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PT Abadi Jaya</td>
+                    <td>Jakarta</td>
+                    <td>Rapat Penawaran Proyek X</td>
+                    <td>Penawaran diterima, tanda tangan kontrak minggu depan.</td>
+                    <td><span class="status status-success">Deal Closed</span></td>
+                </tr>
+
+                <tr>
+                    <td>CV Bintang Lima</td>
+                    <td>Bandung</td>
+                    <td>Presentasi Produk Baru</td>
+                    <td>Menunggu keputusan dari tim manajemen CV Bintang Lima.</td>
+                    <td><span class="status status-pending">Follow Up</span></td>
+                </tr>
+
+                <tr>
+                    <td>Koperasi Makmur</td>
+                    <td>Surabaya</td>
+                    <td>Negosiasi Harga dan Syarat</td>
+                    <td>Negosiasi gagal, harga tidak cocok.</td>
+                    <td><span class="status status-fail">Lost/Failed</span></td>
+                </tr>
+
+                <tr>
+                    <td>UD Sejahtera</td>
+                    <td>Yogyakarta</td>
+                    <td>Diskusi Kebutuhan Sistem</td>
+                    <td>Data awal terkumpul, perlu pertemuan lanjutan untuk validasi.</td>
+                    <td><span class="status status-pending">In Progress</span></td>
+                </tr>
+
+                </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
